@@ -84,7 +84,9 @@ export default function LoginCard({ onLogin }) {
             <label className="remember">
               <input type="checkbox" checked={remember} onChange={(event) => setRemember(event.target.checked)} /> Remember me
             </label>
-            <a className="forgot" href="#">Forgot password?</a>
+            <button className="forgot" type="button" onClick={() => { /* navigate to reset flow if available */ }}>
+              Forgot password?
+            </button>
           </div>
 
           <button className="primary-button" type="submit" disabled={loading || success} aria-busy={loading}>
